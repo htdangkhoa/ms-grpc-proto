@@ -1,0 +1,11 @@
+{
+  "name": "@htdangkhoa/ms-grpc-proto",
+  "version": "1.0.0",
+  "files": [
+    "protos/*",
+    "package.json"
+  ],
+  "repository": "https://github.com/htdangkhoa/ms-grpc-proto.git",
+  "author": "Khoa Huynh Tran Dang <khoa.htd@amanotes.com>",
+  "license": "MIT"
+}

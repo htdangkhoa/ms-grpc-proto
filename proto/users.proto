@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+service UserService {
+  rpc GetAll() returns (UserList);
+  rpc Get(int32 id) returns (User);
+}
+
+message User {
+  required int32 id = 1;
+  required string email = 2;
+  string name = 3;
+  string phone = 4;
+  string address = 5;
+}
+
+message UserList {
+  repeated User users = 1;
+}

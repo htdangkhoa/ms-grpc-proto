@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service PostService {
+  rpc GetAll() returns (PostList);
+  rpc GetById(int32 id) returns (Post);
+}
+
+message Post {
+  required string id = 1;
+  required string title = 2;
+  required string content = 3;
+  required string author = 4;
+  required int32 created = 5;
+  required int32 updated = 6;
+}
+
+message PostList {
+  repeated Post posts = 1;
+}
