@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 service PostService {
-  rpc GetAll () returns (PostList);
+  rpc GetAll (Empty) returns (PostList);
   rpc GetById (GetByIdRequest) returns (Post);
 }
 
