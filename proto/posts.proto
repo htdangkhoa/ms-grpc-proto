@@ -1,9 +1,11 @@
 syntax = "proto3";
 
 service PostService {
-  rpc GetAll() returns (PostList);
-  rpc GetById(int32 id) returns (Post);
+  rpc GetAll (Empty) returns (PostList);
+  rpc GetById (GetByIdRequest) returns (Post);
 }
+
+message Empty {}
 
 message Post {
   required string id = 1;
@@ -16,4 +18,8 @@ message Post {
 
 message PostList {
   repeated Post posts = 1;
+}
+
+message GetByIdRequest {
+  required int32 id = 1;
 }

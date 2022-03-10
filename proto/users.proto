@@ -1,9 +1,12 @@
 syntax = "proto3";
 
 service UserService {
-  rpc GetAll() returns (UserList);
-  rpc Get(int32 id) returns (User);
+  rpc GetAll (Empty) returns (UserList);
+  rpc GetById (GetByIdRequest) returns (User);
 }
+
+
+message Empty {}
 
 message User {
   required int32 id = 1;
@@ -15,4 +18,8 @@ message User {
 
 message UserList {
   repeated User users = 1;
+}
+
+message GetByIdRequest {
+  required int32 id = 1;
 }
